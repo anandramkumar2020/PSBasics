@@ -4,7 +4,7 @@
 ## PowerShell 101
 
 
-## Topics Covered
+#### Topics Covered
 ### PowerShell Foundations
 ### Functions: Your PowerShell Superpowers
 ### Module Magic: Embrace the World of PowerShell Modules
