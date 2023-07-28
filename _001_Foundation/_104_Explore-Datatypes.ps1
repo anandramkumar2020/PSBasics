@@ -14,9 +14,11 @@
 #get-help about_Numeric_Literals
 
 #Scriptblock (Grouping expressions)
+#$filename =  ".\Services.txt"
 #Test-Path $filename
 #$myscriptblock = {Test-Path $filename}
 # & $myscriptblock #--> Add & infront to run the scriptblock
+#Invoke-Command -ScriptBlock $myscriptblock
 
 #Collection of Objects ; Arrays 
 #$location = @('Trivandrum','Cochin','Bangalore') #--> Array

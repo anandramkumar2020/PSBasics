@@ -1,9 +1,9 @@
 #Pipeline - Pass output of one command to another
 
 #Regular Method
-#$remoteService = "Winrm"
-#Get-service -Name $remoteService 
-#Stop-service -Name $remoteService
+# $remoteService = "Winrm"
+# Get-service -Name $remoteService 
+# Stop-service -Name $remoteService
 
 #Using Pipeline
 #Get-service -Name WinRM | Start-Service 
