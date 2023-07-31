@@ -125,27 +125,34 @@ Function Get-MemoryInfo {
         [System.Management.Automation.Runspaces.PSSession] $Session     #Remote Session
     )
 
-    #OutObject represented as a HashTable
-    $outObject = @{
-        'ComputerName'     = $Session.ComputerName             #Remote Computer Name
-        'HardwareCategory' = 'Memory'   
-        'info'             = $null
-    }
-
-    $scriptBlock = {
-        Get-CimInstance -ClassName Win32_PhysicalMemory
-    }
-    $result = Invoke-Command -Session $Session -ScriptBlock $scriptBlock
-    
-    $info = $result | ForEach-Object { #For Each result a custom object is created
-        [PSCustomObject]@{                          #Having 3 properties
-            'Manufacturer'  = $_.Manufacturer
-            'Capacity'      = $_.Capacity
-            'DeviceLocator' = $_.DeviceLocator
+    try {
+        #OutObject represented as a HashTable
+        $outObject = @{
+            'ComputerName'     = $Session.ComputerName             #Remote Computer Name
+            'HardwareCategory' = 'Memory'   
+            'info'             = $null
         }
+
+        $scriptBlock = {
+            Get-CimInstance -ClassName Win32_PhysicalMemory
+        }
+
+        $result = Invoke-Command -Session $Session -ScriptBlock $scriptBlock -ErrorAction Stop
+    
+        $info = $result | ForEach-Object { #For Each result a custom object is created
+            [PSCustomObject]@{                          #Having 3 properties
+                'Manufacturer'  = $_.Manufacturer
+                'Capacity'      = ConvertTo-Gb -Bytes $_.Capacity
+                'DeviceLocator' = $_.DeviceLocator
+            }
+        }
+        $outObject['info'] = $info
+        [PSCustomObject]$outObject                      #Cleaner Output
     }
-    $outObject['info'] = $info
-    [PSCustomObject]$outObject                      #Cleaner Output
+    catch {
+        $outObject['info'] = $_.Exception.Message
+        [PSCustomObject]$outObject 
+    }
 }
 
 

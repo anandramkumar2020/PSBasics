@@ -1,4 +1,4 @@
-#Invoke-Pester -Output Detailed  .\ComputerInventory.Tests.ps1
+#Invoke-Pester -Output Detailed  .\_003_ComputerInventory.Tests.ps1 
 BeforeAll {
     Import-Module -Name ComputerInventory -Force
     $session = New-PSSession -ComputerName ANANDRAMKUMAR

@@ -1,0 +1,41 @@
+{
+    "category": "Indoor Games",
+    "games": [
+      {
+        "name": "Board Games",
+        "subcategories": [
+          {
+            "name": "Chess",
+            "players": "2",
+            "description": "Chess is a two-player strategy board game played on an 8x8 grid."
+          },
+          {
+            "name": "Monopoly",
+            "players": "2-6",
+            "description": "Monopoly is a classic board game where players buy, sell, and trade properties to build their empires."
+          }
+        ]
+      },
+      {
+        "name": "Card Games",
+        "subcategories": [
+          {
+            "name": "Poker",
+            "players": "2-10",
+            "description": "Poker is a popular card game involving betting and strategic play."
+          },
+          {
+            "name": "Uno",
+            "players": "2-10",
+            "description": "Uno is a fun and fast-paced card game where players match colors and numbers to be the first to play all their cards."
+          }
+        ]
+      },
+      {
+        "name": "Table Tennis",
+        "players": "2 or 4",
+        "description": "Table Tennis, also known as ping pong, is a fast and exciting indoor sport played on a small table with a ball and paddles."
+      }
+    ]
+  }
+  

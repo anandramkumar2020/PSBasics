@@ -1,0 +1,3 @@
+Winrm
+MySQL80
+mosquitto
