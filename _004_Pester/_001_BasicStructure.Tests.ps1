@@ -10,7 +10,7 @@ BeforeAll {
     Write-Host ">>> Text in BeforeAll"
 }
 
-Describe "Pester Insallation" {
+Describe "Pester Installation" {
 
     Context "Hello World" {
 

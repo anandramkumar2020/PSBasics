@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="5" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="1" invalid="0" date="2023-07-31" time="14:47:01">
+  <environment clr-version="Unknown" cwd="D:\PSBasics-Workspace\PSBasics\_004_Pester" user="anand.ramkumar" nunit-version="2.5.8.0" user-domain="EXPERIONGLOBAL" platform="Microsoft Windows 10 Pro|C:\Windows|\Device\Harddisk0\Partition3" machine-name="ANANDRAMKUMAR" os-version="10.0.19045" />
+  <culture-info current-culture="en-IN" current-uiculture="en-US" />
+  <test-suite type="TestFixture" name="Pester" executed="True" result="Failure" success="False" time="0.152" asserts="0" description="Pester">
+    <results>
+      <test-suite type="TestFixture" name="D:\PSBasics-Workspace\PSBasics\_004_Pester\_001_BasicStructure.Tests.ps1" executed="True" result="Failure" success="False" time="0.152" asserts="0" description="D:\PSBasics-Workspace\PSBasics\_004_Pester\_001_BasicStructure.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Pester Installation" executed="True" result="Failure" success="False" time="0.073" asserts="0" description="Pester Installation">
+            <results>
+              <test-suite type="TestFixture" name="Pester Installation.Hello World" executed="True" result="Failure" success="False" time="0.068" asserts="0" description="Pester Installation.Hello World">
+                <results>
+                  <test-case description="Test Pass" name="Pester Installation.Hello World.Test Pass" time="0.0124" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Test Fail" name="Pester Installation.Hello World.Test Fail" time="0.0174" asserts="0" success="False" result="Failure" executed="True">
+                    <failure>
+                      <message>Expected 6, but got 5.</message>
+                      <stack-trace>at 2 + 3 | Should -Be 6, D:\PSBasics-Workspace\PSBasics\_004_Pester\_001_BasicStructure.Tests.ps1:21
+at &lt;ScriptBlock&gt;, D:\PSBasics-Workspace\PSBasics\_004_Pester\_001_BasicStructure.Tests.ps1:21</stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case description="Test Pass" name="Pester Installation.Hello World.Test Pass" time="0.0088" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Test Tagged" name="Pester Installation.Hello World.Test Tagged" time="0.0188" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="Test Skipped" name="Pester Installation.Hello World.Test Skipped" time="0.0033" asserts="0" success="False" result="Ignored" executed="False" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
